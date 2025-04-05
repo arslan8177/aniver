@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anivers</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>	
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'		>	
+						   
+    <!-- Custom CSS -->
+    <style>
+        body{
+           background-color: black;
+        }
+        
+        .hero{
+    background: url(assets/backimgani.webp) no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: black;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+.hero h1 {
+    animation: fadeIn 2s ease-in-out 0.5s; 
+    animation-fill-mode: forwards; 
+    opacity: 0; 
+}
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh; /* Adjust height for smaller screens */
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh; /* Adjust height for very small screens */
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero {
+        height: 50vh; /* Adjust for the smallest screens */
+        font-size: 14px; /* Adjust font size if needed */
+        padding: 0 5px;
+    }
+}
+
+.hero .content {
+    max-width: 600px;
+}
+
+.hero h1 {
+      background-color: #adb5bd;
+      opacity: 0.8;
+     width: 37%;
+     text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+        
+/* General styles for navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #343a40;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.logo{
+  margin-left: 30px;
+}
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links a {
+  padding: 9px;
+  color: #adb5bd;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #495057;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #6c757d;
+}
+
+/* Menu icon for responsive design */
+.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Hide the checkbox by default */
+#check {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .search-bar {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  #check:checked ~ .nav-links {
+    display: flex;
+  }
+
+  #check:checked ~ .search-bar {
+    display: flex;
+  }
+}
+
+   
+
+/* Movie Section */
+.movie-section {
+    padding: 50px 5%;
+    color: aliceblue;
+}
+
+.movie-section h2 {
+  text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.movie-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.movie-row img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-row img:hover {
+    transform: scale(1.1);
+}
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffd700;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffd700;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+}
+
+    </style>
+</head>
+<body >
+
+<!-- Navbar -->
+<nav class="navbar">
+  <input type="checkbox" id="check">
+  <label for="check" class="icon">
+    <i class='bx bx-menu' id="menu-icon"></i>
+  </label>
+  <div class="logo">
+    <a class="navbar-brand" href="#"><img src="assets/anivers.jpeg" height="45vh" width="46vw" class="rounded-pill"></a>
+    <a href="#">Anivers</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="http://127.0.0.1:5500/index3.html">Home</a></li>
+    <li><a href="http://127.0.0.1:5500/character.html">Characters</a></li>
+    <li><a href="http://127.0.0.1:5500/assets/abot.html">Contact</a></li>
+    <li><a href="http://127.0.0.1:5500/index.html">logout</a></li>
+  </ul>
+  <form class="search-bar" onsubmit="handleSearch(event)">
+    <input type="text" id="search-input" placeholder="Search anime..." required />
+    <button type="submit">Search</button>
+  </form>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Welcome to Anivers</h1>
+</section>
+<section class="movie-section">
+  <h2>Trending Now</h2>
+  <div class="movie-row">
+    <a href="http://127.0.0.1:5500/index4.html">
+      <img class="ms-4"  src="assets/demon.jpg" alt="Movie 1"></a>
+      <a href="http://127.0.0.1:5500/index5.html">
+      <img class="ms-4" src="assets/wind.jpeg" alt="Movie 2"></a>
+      <a href="http://127.0.0.1:5500/index6.html">
+      <img class="ms-4" src="assets/spy.jpg" alt="Movie 3"></a>
+      <a href="http://127.0.0.1:5500/index7.html">
+      <img class="ms-4" src="assets/tok2.jpg" alt="Movie 4"></a>
+      <a href="http://127.0.0.1:5500/index8.html">
+      <img class="ms-4" src="assets/juju.jpeg" alt="Movie 5"></a>
+      <a href="http://127.0.0.1:5500/index9.html">
+        <img class="ms-4" src="assets/wisto.jpg" alt="Movie 5"></a>
+  </div>
+</section>
+
+
+
+
+
+<section class="movie-section">
+  <h2>New</h2>
+  <div class="movie-row">
+    <a href="http://127.0.0.1:5500/blueloack.html">
+      <img class="ms-4"  src="assets/blue.jpeg" alt="Movie 1"></a>
+      <a href="http://127.0.0.1:5500/masle.html">
+      <img class="ms-4" src="assets/masle.jpg" alt="Movie 2"></a>
+      <a href="http://127.0.0.1:5500/dragonboll.html">
+      <img class="ms-4" src="assets/dragonzsuper.jpg" alt="Movie 3"></a>
+      <a href="http://127.0.0.1:5500/danadana.html">
+      <img class="ms-4" src="assets/dana.jpeg" alt="Movie 4"></a>
+      <a href="http://127.0.0.1:5500/bleach.html">
+      <img class="ms-4" src="assets/bleach.jpg" alt="Movie 5"></a>
+      <a href="http://127.0.0.1:5500/haikyu.html">
+      <img class="ms-4"  src="assets/haiku.jpg" alt="Movie 1"></a>
+  </div>
+</section>
+
+
+
+<section class="movie-section">
+  <h2>Anime Movies</h2>
+  <div class="movie-row">
+    <a href="http://127.0.0.1:5500/aot.html">
+      <img class="ms-4"  src="assets/AOT.jpg" alt="Movie 1"></a>
+      <a href="http://127.0.0.1:5500/thelast.html">
+      <img class="ms-4" src="assets/last.jpeg" alt="Movie 2"></a>
+      <a href="http://127.0.0.1:5500/silent.html">
+      <img class="ms-4" src="assets/silent.jpeg" alt="Movie 3"></a>
+      <a href="http://127.0.0.1:5500/name.html">
+      <img class="ms-4" src="assets/your.jpeg" alt="Movie 4"></a>
+      <a href="http://127.0.0.1:5500/panci.html">
+      <img class="ms-4" src="assets/pancery.jpeg" alt="Movie 5"></a>
+      <a href="http://127.0.0.1:5500/withyou.html">
+      <img class="ms-4"  src="assets/withyou.jpeg" alt="Movie 1"></a>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>We are dedicated to providing the best services for our customers.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="http://127.0.0.1:5500/index3.html#about">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/assets/help.html">About</a></li>
+        <li><a href="http://127.0.0.1:5500/assets/abot.html">Contact</a></li>
+        <li><a href="http://127.0.0.1:5500/net1st.html">logout</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: anivers@gmail.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 416001, kolhapure, india</p>
+    </div>
+    <div class="footer-section social-media">
+      <h4>Follow Us</h4>
+      <ul>
+        <a href="https://www.instagram.com/">
+      <li><img src="assets/insicon.webp" height="20vh" width="20vw">Instagram </a> </li>
+      <a href="https://www.facebook.com/"> 
+      <li><img src="assets/face.png" height="20vh" width="20vw">Facebook </a> </li>
+      <a href="https://x.com/i/flow/login?lang=en">
+     <li><img src="assets/twiter.png" height="20vh" width="20vw">Twitter</a> </li>
+    </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Anivers. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

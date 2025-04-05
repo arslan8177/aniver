@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Custom styles for the responsive navbar */
+      body{
+        background-color: black;
+      }
+      ---------------------------------------------------------------------------------------
+        /* General styles for navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #343a40;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links a {
+  color: #adb5bd;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #495057;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #6c757d;
+}
+
+/* Menu icon for responsive design */
+.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Hide the checkbox by default */
+#check {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .search-bar {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  #check:checked ~ .nav-links {
+    display: flex;
+  }
+
+  #check:checked ~ .search-bar {
+    display: flex;
+  }
+}
+
+        ---------------------------------------------------------------------------------------
+        /* Movie Section */
+.movie-section {
+    padding: 50px 5%;
+    margin-bottom: 5px;
+}
+
+.movie-section h2 {
+    color: aliceblue;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.movie-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.movie-row img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-right: 85px;
+}
+
+.movie-row img:hover {
+    transform: scale(1.1);
+}
+/* Footer styles */
+
+.footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            color: white;
+        }
+        th, td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        th {
+            color: yellow;
+            text-align: left;
+            font-size: 18px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .social-icons img {
+            width: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+<nav class="navbar">
+  <input type="checkbox" id="check">
+  <label for="check" class="icon">
+    <i class='bx bx-menu' id="menu-icon"></i>
+  </label>
+  <div class="logo">
+    <a class="navbar-brand" href="#"><img src="assets/anivers.jpeg" height="45vh" width="46vw" class="rounded-pill"></a>
+    <a href="#">Anivers</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="http://127.0.0.1:5500/index3.html#about">Home</a></li>
+    <li><a href="http://127.0.0.1:5500/character.html">Characters</a></li>
+    <li><a href="http://127.0.0.1:5500/assets/abot.html">Contact</a></li>
+  </ul>
+</nav>
+    <section class="movie-section">
+        <h2>AMAZING ANIME CHARACTERS POSTRES</h2>
+        <div class="movie-row">
+            <img class="ms-4"  src="assets/chara1.jpg" alt="Movie 1">
+            <img class="ms-4" src="assets/chara2.jpg" alt="Movie 2">
+            <img class="ms-4" src="assets/chara3.jpg" alt="Movie 3">
+            <img class="ms-4" src="assets/chara5.jpg" alt="Movie 4">
+        </div>
+    </section>
+    <section class="movie-section">
+        <div class="movie-row">
+            <img class="ms-4"  src="assets/chara9.jpeg" alt="Movie 1">
+            <img class="ms-4" src="assets/chara10.jpg" alt="Movie 2">
+            <img class="ms-4" src="assets/chara11.webp" alt="Movie 3">
+            <img class="ms-4" src="assets/chara12.jpeg" alt="Movie 4">
+        </div>
+    </section>
+    <section class="movie-section">
+        <div class="movie-row">
+            <img class="ms-4"  src="assets/chara13.jpg" alt="Movie 1">
+            <img class="ms-4" src="assets/chara14.jpg" alt="Movie 2">
+            <img class="ms-4" src="assets/chara15.webp" alt="Movie 3">
+            <img class="ms-4" src="assets/chara16.webp" alt="Movie 4">
+        </div>
+    </section>
+    <section class="movie-section">
+        <div class="movie-row">
+            <img class="ms-4"  src="assets/chara17.jpg" alt="Movie 1">
+            <img class="ms-4" src="assets/chara18.jpeg" alt="Movie 2">
+            <img class="ms-4" src="assets/chara19.jpg" alt="Movie 3">
+            <img class="ms-4" src="assets/chara20.jpg" alt="Movie 4">
+        </div>
+    </section><section class="movie-section">
+        <div class="movie-row">
+            <img class="ms-4"  src="assets/chara21.jpg" alt="Movie 1">
+            <img class="ms-4" src="assets/chara22.jpg" alt="Movie 2">
+            <img class="ms-4" src="assets/chara23.jpg" alt="Movie 3">
+            <img class="ms-4" src="assets/chara25.jpg" alt="Movie 4">
+        </div>
+    </section>
+   
+ <!-- Footer -->
+ <footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>We are dedicated to providing the best services for our customers.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="http://127.0.0.1:5500/index3.html#about">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/assets/help.html">About</a></li>
+        <li><a href="http://127.0.0.1:5500/assets/abot.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: anivers@gmail.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 416001, kolhapure, india</p>
+    </div>
+    <div class="footer-section social-media">
+      <h4>Follow Us</h4>
+      <ul>
+        <a href="https://www.instagram.com/">
+      <li><img src="assets/insicon.webp" height="20vh" width="20vw">Instagram </a> </li>
+      <a href="https://www.facebook.com/"> 
+      <li><img src="assets/face.png" height="20vh" width="20vw">Facebook </a> </li>
+      <a href="https://x.com/i/flow/login?lang=en">
+     <li><img src="assets/twiter.png" height="20vh" width="20vw">Twitter</a> </li>
+    </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Anivers. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

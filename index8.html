@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jujutsu Kaisen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'		>	
+    <style>
+        body{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+
+      ---------------------------------------------------------------------------------------
+        /* General styles for navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #343a40;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+.logo{
+  margin-left: 80px;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links a {
+  color: #adb5bd;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  margin-right: 70px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* Search bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #495057;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #6c757d;
+}
+
+/* Menu icon for responsive design */
+.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Hide the checkbox by default */
+#check {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .search-bar {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  #check:checked ~ .nav-links {
+    display: flex;
+  }
+
+  #check:checked ~ .search-bar {
+    display: flex;
+  }
+}
+
+        ---------------------------------------------------------------------------------------
+        #solo{
+            margin-top: 20vh;
+            color: white;
+            margin-left: 15%;
+        }
+    .container1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+      color: white;
+      height: 80vh;
+      border-bottom: 10px solid rgb(48, 45, 45);
+      gap: 2rem;
+    }
+
+
+/*responsive code*/
+h1, h4 ,h3{
+    text-align: center;
+    color: aliceblue;
+}
+
+p {
+    padding: 0 15px;
+    text-align: justify;
+    color: aliceblue;
+    width: 80%;
+    margin-left: 50px;
+}
+
+.soloim img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.button-grid {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Responsive grid for buttons */
+.button-grid button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: rgb(63, 61, 61);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-grid button:hover {
+    background-color: rgb(223, 21, 21);
+}
+
+/* Grid layout adjustment */
+@media (min-width: 320px) {
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .button-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .button-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+     /* Footer styles */
+     .footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            color: white;
+        }
+        th, td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        th {
+            color: yellow;
+            text-align: left;
+            font-size: 18px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .social-icons img {
+            width: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <input type="checkbox" id="check">
+  <label for="check" class="icon">
+    <i class='bx bx-menu' id="menu-icon"></i>
+  </label>
+  <div class="logo">
+    <a class="navbar-brand" href="#"><img src="assets/anivers.jpeg" height="45vh" width="46vw" class="rounded-pill">Anivers</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="http://127.0.0.1:5500/index3.html#about">Home</a></li>
+    <li><a href="http://127.0.0.1:5500/character.html">Characters</a></li>
+    <li><a href="http://127.0.0.1:5500/assets/abot.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+<div class="soloim">
+    <img src="assets/juju.jpeg">
+</div>
+    
+          <div class="solop">
+            <h4> The Jujutsu Kaisen.</h4>
+            <p>   Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the "King of Curses." Yuuji experiences first-hand the threat these Curses pose to society as he discovers his own newfound powers. Introduced to the Tokyo Metropolitan Jujutsu Technical High School, he begins to walk down a path from which he cannot return—the path of a Jujutsu sorcerer. [Written by MAL Rewrite]  </p>
+
+
+
+      <section>
+        <h1 id="solo">THE JUJUTSU KAISEN SEASON 1</h1>
+        <h3>EPISODES ARE NOT REAL JUST FOR PROJECT</h3>
+    </section>
+    <section>
+      <div class="button-grid">
+        <!-- Generate 24 buttons -->
+        <a href="assets/juju20.mp4">
+          <button class="ps-1">Play episode 1 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 1<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button> Play episode 2 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 2<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button> Play episode 3 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 3<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 4 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 4<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 5
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 5<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 6
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 6<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 7 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 7<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 8 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 8<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 9
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 9<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 10 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 10<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 11 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 11<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 12
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 12<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 13 
+          </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 13<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 14 </button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 14<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 15</button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 15<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 16</button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 16<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 17</button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 17<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 18</button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 18<br>Download Video</a>
+          </button></a>
+          <a href="assets/demon1.mp4">
+          <button>Play episode 19</button></a>
+          <button><a class="download-link" href="assets/demon1.mp4" download>episode 19<br>Download Video</a>
+          </button></a>
+          <a href="assets/juju20.mp4">
+          <button>Play episode 20</button></a>
+          <button><a class="download-link" href="assets/juju20.mp4" download>episode 20<br>Download Video</a>
+          </button></a>
+          <a href="assets/juju21">
+          <button>Play episode 21</button></a>
+          <button><a class="download-link" href="assets/juju21.mp4" download>episode 21<br>Download Video</a>
+          </button></a>
+          <a href="assets/juju22.mp4">
+          <button>Play episode 22</button></a>
+          <button><a class="download-link" href="assets/juju22.mp4" download>episode 22<br>Download Video</a>
+          </button></a>
+          <a href="assets/juju23.mp4">
+          <button>Play episode 23</button></a>
+          <button><a class="download-link" href="assets/juju23.mp4" download>episode 23<br>Download Video</a>
+          </button></a>
+          <a href="assets/juju24.mp4">
+          <button>Play episode 24</button></a>
+          <button><a class="download-link" href="assets/juju24.mp4" download>episode 24<br>Download Video</a>
+          </button></a>
+
+      </div>
+      
+        <h1 id="solo" class="mt-1">THE JUJUTSU KAISEN SEASON 2</h1>
+        <div class="button-grid">
+          <a href="assets/demon1.mp4">
+            <button class="ps-1">Play episode 1 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 1<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button> Play episode 2 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 2<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button> Play episode 3 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 3<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 4 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 4<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 5
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 5<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 6
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 6<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 7 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 7<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 8 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 8<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 9
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 9<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 10 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 10<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 11 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 11<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 12
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 12<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 13 
+            </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 13<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 14 </button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 14<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 15</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 15<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 16</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 16<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 17</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 17<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 18</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 18<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 19</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 19<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 20</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 20<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 21</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 21<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 22</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 22<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 23</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 23<br>Download Video</a>
+            </button></a>
+            <a href="assets/demon1.mp4">
+            <button>Play episode 24</button></a>
+            <button><a class="download-link" href="assets/demon1.mp4" download>episode 24<br>Download Video</a>
+            </button></a>
+      </div>
+
+      
+      <!-- Footer -->
+      <div class="footer">
+        <table>
+            <tr>
+                <th>About Us</th>
+                <th>Quick Links</th>
+                <th>Contact Us</th>
+                <th>Follow Us</th>
+            </tr>
+            <tr>
+                <td>We are dedicated to providing the best services for our customers.</td>
+                <td>
+                    <a href="http://127.0.0.1:5500/index3.html#about">Home</a><br><br>
+                    <a href="http://127.0.0.1:5500/assets/help.html">About</a><br><br>
+                    <a href="http://127.0.0.1:5500/assets/abot.html">Contact</a><br><br>
+                    <a href="http://127.0.0.1:5500/net1st.html">Logout</a><br>
+                </td>
+                <td>
+                    Email: anivers@gmail.com<br><br>
+                    Phone: +123 456 7890<br><br>
+                    Address: 416001, Kolhapur, India
+                </td>
+                <td class="social-icons">
+                  
+                    <a href="https://www.instagram.com/"><img src="assets/insicon.webp" alt="Instagram"> Instagram</a><br><br>
+                    <a href="https://www.facebook.com/"><img src="assets/face.png" alt="Facebook"> Facebook</a><br><br>
+                    <a href="https://x.com/i/flow/login?lang=en"><img src="assets/twiter.png" alt="Twitter"> Twitter</a><br><br>
+                </td>
+            </tr>
+        </table>
+        <div class="copyright">
+            © 2024 Anivers. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
